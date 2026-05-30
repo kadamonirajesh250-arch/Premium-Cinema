@@ -1,0 +1,85 @@
+.movies-catalog-container {
+  padding: 20px 0 60px;
+}
+
+.search-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #ff2a5f;
+  box-shadow: 0 0 10px rgba(255, 42, 95, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-box::before {
+  content: '🔍';
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.genre-filter-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.genre-pill {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #8c9bb4;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.genre-pill:hover, .genre-pill.active {
+  color: white;
+  background: #ff2a5f;
+  border-color: #ff2a5f;
+  box-shadow: 0 4px 12px rgba(255, 42, 95, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 40px;
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.empty-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,129 @@
+/* ==========================================================================
+   1. DESIGN SYSTEM & VARIABLE DEFINITIONS
+   ========================================================================== */
+:root {
+  --bg-darkest: #070913;
+  --bg-darker: #0c0f1d;
+  --bg-dark: #12182c;
+  --bg-card: rgba(18, 24, 44, 0.7);
+  --border-glow: rgba(255, 42, 95, 0.15);
+  --primary: #ff2a5f;
+  --primary-glow: rgba(255, 42, 95, 0.4);
+  --accent: #ffb800;
+  --accent-glow: rgba(255, 184, 0, 0.3);
+  --success: #00f076;
+  --success-glow: rgba(0, 240, 118, 0.25);
+  --text-white: #ffffff;
+  --text-muted: #8c9bb4;
+  --font-outfit: 'Outfit', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --shadow-glowing: 0 8px 32px 0 rgba(255, 42, 95, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-outfit);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-darkest);
+  color: var(--text-white);
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 42, 95, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(0, 240, 118, 0.05) 0%, transparent 45%);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darkest);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Reusable UI Components */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-space);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #db003d 100%);
+  color: var(--text-white);
+  box-shadow: 0 4px 15px rgba(255, 42, 95, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 42, 95, 0.5);
+  background: linear-gradient(135deg, #ff4c7b 0%, var(--primary) 100%);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--text-white);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Rating Badge */
+.rating-badge {
+  background: rgba(255, 184, 0, 0.15);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
